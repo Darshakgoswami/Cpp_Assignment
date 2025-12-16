@@ -1,13 +1,15 @@
 #include <iostream>
 using namespace std;
 
-class Student {
+class Student 
+{
 protected:
     string name;
     int rollNo;
 
 public:
-    void getStudentDetails() {
+    void getStudentDetails() 
+    {
         cout << "Enter student name: ";
         getline(cin, name);
         cout << "Enter roll number: ";
@@ -15,12 +17,14 @@ public:
     }
 };
 
-class Marks : public Student {
+class Marks : public Student 
+{
 protected:
     int mark1, mark2, mark3;
 
 public:
-    void getMarks() {
+    void getMarks() 
+    {
         cout << "Enter marks for 3 subjects:" << endl;
         cout << "Subject 1: ";
         cin >> mark1;
@@ -31,9 +35,11 @@ public:
     }
 };
 
-class Result : public Marks {
+class Result : public Marks 
+{
 public:
-    void displayResult() {
+    void displayResult() 
+    {
         int total = mark1 + mark2 + mark3;
         float percentage = total / 3.0;
         cout << "Name :" << name << endl;
